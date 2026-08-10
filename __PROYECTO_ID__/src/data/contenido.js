@@ -18,11 +18,11 @@ export const META = {
   materia:         "{{MATERIA}}",          // nombre corto de la materia
   nombreCompleto:  "{{APP_NOMBRE}}",       // nombre completo para la pantalla de créditos
   version:         "1.0.0",
-  autor:           "{{AUTOR}}",            // nombre del docente responsable
+  autor:           "Dr. Pablo Eduardo Cancino Marentes", // nombre del docente responsable
   anio:            "{{ANIO}}",             // año de creación
   descripcion:     "{{APP_DESC}}",         // ≤160 caracteres para SEO
   unidad:          "Unidad Académica de Ciencias Básicas e Ingenierías",
-  programa:        "Licenciatura en Matemáticas",
+  programa:        "Programa Académico de Licenciatura en Matemáticas",
   norma:           "NTE-UAN-APK-001 v1.3",
 };
 
@@ -46,23 +46,21 @@ export const GRAFO_SIM = {
 };
 
 // ── CRÉDITOS — Equipos del proyecto ──────────────────────────────────────────
-// Agrega aquí a los colaboradores del proyecto.
 export const CREDITOS = [
   {
-    rol:   "Docentes Investigadores",
+    rol:   "Investigación Docente en Tecnología Educativa",
     icono: "🎓",
     personas: [
-      { nombre: "{{AUTOR}}",  detalle: "Investigador responsable" },
-      // { nombre: "Nombre Colaborador", detalle: "Investigador colaborador" },
+      { nombre: "Dr. Pablo Eduardo Cancino Marentes",  detalle: "Docente Investigador Responsable" },
     ],
   },
-  // {
-  //   rol:   "Apoyo en el desarrollo de la Investigación",
-  //   icono: "💻",
-  //   personas: [
-  //     { nombre: "Nombre Estudiante", detalle: "Estudiante — Licenciatura en Matemáticas" },
-  //   ],
-  // },
+  {
+    rol:   "Adscripción Institucional",
+    icono: "🏛️",
+    personas: [
+      { nombre: "Programa Académico de Licenciatura en Matemáticas", detalle: "Unidad Académica de Ciencias Básicas e Ingenierías — UAN" },
+    ],
+  },
 ];
 
 // ═══════════════════════════════════════════════════════════════════════════════

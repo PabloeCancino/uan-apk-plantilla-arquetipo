@@ -8,8 +8,20 @@ const MACROS = {
   "\\R": "\\mathbb{R}",
   "\\N": "\\mathbb{N}",
   "\\Z": "\\mathbb{Z}",
+  "\\Q": "\\mathbb{Q}",
+  "\\C": "\\mathbb{C}",
+  "\\I": "\\mathbb{I}",
+  "\\i": "\\mathbb{i}",
   "\\O": "\\emptyset",
   "\\G": "\\mathcal{G}",
+  "\\sen": "\\operatorname{sen}",
+  "\\tg": "\\operatorname{tg}",
+  "\\cotg": "\\operatorname{cotg}",
+  "\\senh": "\\operatorname{senh}",
+  "\\tgh": "\\operatorname{tgh}",
+  "\\sech": "\\operatorname{sech}",
+  "\\csch": "\\operatorname{csch}",
+  "\\coth": "\\operatorname{coth}",
 };
 
 /**

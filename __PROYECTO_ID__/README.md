@@ -79,18 +79,21 @@ src/
 
 ```powershell
 # Crear keystore primero (una sola vez):
-& "J:\Desarrollo_de_APK\jdk21\jdk-21.0.6+7\bin\keytool.exe" `
+& "E:\Desarrollo_de_APK\jdk21\jdk-21.0.6+7\bin\keytool.exe" `
     -genkey -v -keystore {{MATERIA}}_release.jks `
     -alias {{MATERIA}} -keyalg RSA -keysize 2048 -validity 10000
 
 # Compilar release:
-J:\Desarrollo_de_APK\Codigo_y_artefactos\compilar_apk_release.ps1 -ProjectPath (Get-Location)
+E:\Desarrollo_de_APK\Codigo_y_artefactos\compilar_apk_release.ps1 -ProjectPath (Get-Location)
 ```
 
-## Autor
+## 📄 Licencia y Créditos
 
-**{{AUTOR}}** · {{ANIO}}
-Universidad Autónoma de Nayarit — Tepic, Nayarit
+Desarrollado por el **Dr. Pablo Eduardo Cancino Marentes** (Investigación Docente en Tecnología Educativa).  
+Programa Académico de Licenciatura en Matemáticas.  
+Unidad Académica de Ciencias Básicas e Ingenierías.  
+**Universidad Autónoma de Nayarit** (UAN) · {{ANIO}}.  
+Todos los derechos reservados.
 
 ---
 

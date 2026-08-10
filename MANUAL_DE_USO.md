@@ -479,38 +479,63 @@ Después de corregirlo, vuelve a compilar con el script de release.
 | `{{APP_ID}}` | `capacitor.config.json`, `contenido.js` | ID Capacitor: `mx.uan.<materia>` |
 | `{{APP_NOMBRE}}` | `index.html`, `contenido.js`, `README.md` | Nombre visible en el dispositivo |
 | `{{APP_DESC}}` | `index.html`, `contenido.js`, `README.md` | Descripción SEO ≤ 160 chars |
-| `{{AUTOR}}` | `contenido.js`, `README.md` | Nombre del docente responsable |
+| `{{AUTOR}}` | `contenido.js`, `README.md` | Docente responsable (por defecto: Dr. Pablo Eduardo Cancino Marentes) |
 | `{{ANIO}}` | `contenido.js`, `README.md` | Año de creación |
+
+---
+
+## 🛠️ Biblioteca de Instrumentos y Componentes Reutilizables
+
+El arquetipo incluye en `src/components/` una suite completa de **30 instrumentos interactivos y visualizadores matemáticos** listos para ser utilizados en cualquier APK:
+
+1. **`Formula.jsx`**: Motor KaTeX (bloque e inline) con macros institucionales para funciones trigonométricas e hiperbólicas (`\sen`, `\tg`, `\cotg`, `\senh`, `\tgh`, `\sech`, `\csch`, `\coth`).
+2. **`VennSVG.jsx`**: Visualizador dinámico de Diagramas de Venn para 2 y 3 conjuntos con regiones sombreadas.
+3. **`GrafoSVG.jsx`**: Visualizador interactivo de teoría de grafos (nodos, aristas dirigidas/no dirigidas y grado).
+4. **`GraficoAsintotas.jsx`**: Graficador SVG con detección y rotura de línea (`M` en lugar de `L`) en asíntotas verticales.
+5. **`GraficoDiscontinuidad.jsx`**: Visualizador de discontinuidades evitables, de salto e infinitas.
+6. **`GraficoTangente.jsx`**: Trazador de derivada y recta tangente en tiempo real.
+7. **`GraficoInflexion.jsx`**: Puntos de inflexión y concavidad ($f''(x)$).
+8. **`GraficoLimiteEpsilonDelta.jsx`**: Visualizador formal de límites $\epsilon$-$\delta$.
+9. **`GraficoTeoremaValorMedio.jsx`**: Ilustración del Teorema del Valor Medio y Rolle.
+10. **`CirculoUnitarioSVG.jsx`**: Círculo trigonométrico interactivo en tiempo real.
+11. **`TrianguloSVG.jsx`**: Geometría de triángulos rectángulos y ley de senos/cosenos.
+12. **`GraficaTrigSVG.jsx`**: Gráfica de funciones trigonométricas armónicas.
+13. **`GraficoPascal.jsx`**: Triángulo de Pascal y desarrollo de binomios.
+14. **`GraficoDesigualdadesCuadraticas.jsx` & `GraficoSistemasInecuaciones.jsx`**: Zonas de solución en el plano cartesiano.
+15. **`Sidebar.jsx`, `VistaTema.jsx`, `TablaContenedor.jsx`, `Creditos.jsx`, `Simulador.jsx`**: Shell accesible con persistencia de avance y tarjetas de créditos de autoría.
 
 ---
 
 ## Estructura de archivos del arquetipo
 
 ```
-J:\Desarrollo_de_APK\
+E:\Desarrollo_de_APK\
 ├── _Plantilla_APK\
-│   ├── nuevo_proyecto.ps1                   ← Script de inicialización
+│   ├── nuevo_proyecto.ps1                   ← Script de inicialización automatizada
 │   └── __PROYECTO_ID__\
+│       ├── .github\workflows\deploy.yml     ← Flujo CI/CD automático para GitHub Pages en vivo
 │       ├── src\
-│       │   ├── data\contenido.js            ← ¡ÚNICO ARCHIVO A EDITAR!
-│       │   ├── App.jsx                      ← Shell con GrafoSVG (no editar)
-│       │   ├── ThemeCtx.js                  ← Paleta DARK/LIGHT
-│       │   ├── main.jsx                     ← Imports obligatorios
+│       │   ├── data\contenido.js            ← ¡ÚNICO ARCHIVO A EDITAR PARA CONTENIDO!
+│       │   ├── App.jsx                      ← Shell principal de la aplicación
+│       │   ├── ThemeCtx.js                  ← Paleta DARK/LIGHT de alto contraste
+│       │   ├── main.jsx                     ← Punto de entrada React
 │       │   ├── index.css                    ← Sistema de diseño responsivo
-│       │   ├── components\Formula.jsx       ← KaTeX block + inline
-│       │   └── hooks\useProgreso.js         ← Persistencia localStorage
-│       ├── public\favicon.svg               ← Reemplazar con ícono de la materia
+│       │   ├── components\                  ← Suite de 30 instrumentos educativos (KaTeX, SVG, etc.)
+│       │   └── hooks\useProgreso.js         ← Persistencia de avance en localStorage
+│       ├── public\favicon.svg
 │       ├── index.html
-│       ├── vite.config.js                   ← base: './' — no modificar
+│       ├── vite.config.js                   ← base: './' (WebView + GitHub Pages)
 │       ├── capacitor.config.json
 │       ├── package.json
 │       └── README.md
 └── Codigo_y_artefactos\
-    ├── compilar_apk_debug.ps1               ← Acepta -ProjectPath
-    └── compilar_apk_release.ps1             ← Acepta -ProjectPath
+    ├── compilar_apk_debug.ps1               ← Compilación de APK Debug
+    └── compilar_apk_release.ps1             ← Compilación de APK Release firmada
 ```
 
 ---
 
-*Manual elaborado por Tecnología Educativa UAN — Abril 2026*  
+*Desarrollado en la Universidad Autónoma de Nayarit (UAN)*  
+*Investigación Docente en Tecnología Educativa*  
+*Autor: Dr. Pablo Eduardo Cancino Marentes — Licenciatura en Matemáticas · UABC-I*  
 *Norma aplicada: NTE-UAN-APK-001 v1.3*

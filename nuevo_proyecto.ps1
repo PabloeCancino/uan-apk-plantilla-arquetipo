@@ -16,8 +16,9 @@
 #>
 
 # ── Rutas base ────────────────────────────────────────────────────────────────
-$BaseDir = "J:\Desarrollo_de_APK"
-$PlantillaDir = Join-Path $BaseDir "_Plantilla_APK\__PROYECTO_ID__"
+$BaseDir = Split-Path -Parent $PSScriptRoot
+if (-not (Test-Path $BaseDir)) { $BaseDir = "E:\Desarrollo_de_APK" }
+$PlantillaDir = Join-Path $PSScriptRoot "__PROYECTO_ID__"
 
 Write-Host ""
 Write-Host "╔══════════════════════════════════════════════════════╗" -ForegroundColor Cyan
@@ -64,7 +65,7 @@ $APP_DESC = Pedir "Descripción (≤160 chars para SEO)" "Aplicación educativa 
 if ($APP_DESC.Length -gt 160) { $APP_DESC = $APP_DESC.Substring(0, 157) + "..." }
 
 # Autor
-$AUTOR = Pedir "Nombre del docente responsable"
+$AUTOR = Pedir "Nombre del docente responsable" "Dr. Pablo Eduardo Cancino Marentes"
 
 # Año
 $ANIO = Pedir "Año de creación" (Get-Date -Format "yyyy")

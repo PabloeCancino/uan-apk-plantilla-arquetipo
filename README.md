@@ -40,8 +40,9 @@ Este repositorio contiene la **plantilla oficial y arquetipo de desarrollo** par
 
 ## 📄 Licencia y Créditos
 
-Desarrollado en la **Universidad Autónoma de Nayarit** (UAN).  
+Desarrollado por el **Dr. Pablo Eduardo Cancino Marentes**.  
 Investigación Docente en Tecnología Educativa.  
 Programa Académico de Licenciatura en Matemáticas.  
 Unidad Académica de Ciencias Básicas e Ingenierías.  
+**Universidad Autónoma de Nayarit** (UAN).  
 Todos los derechos reservados © 2026.
