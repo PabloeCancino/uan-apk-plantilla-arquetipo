@@ -1,6 +1,7 @@
 # 🏛️ Arquetipo de Proyectos APK UAN — Norma NTE-UAN-APK-001 v1.3
 
-[![Norma](https://img.shields.io/badge/Norma-NTE--UAN--APK--001%20v1.3-blue?style=for-the-badge)](MANUAL_DE_USO.md)
+[![Norma](https://img.shields.io/badge/Norma-NTE--UAN--APK--001%20v1.3-purple?style=for-the-badge)](MANUAL_DE_USO.md)
+[![Despliegue](https://img.shields.io/badge/GitHub%20Pages-Habilitado-blue?style=for-the-badge&logo=githubpages)](MANUAL_DE_USO.md)
 [![Licencia](https://img.shields.io/badge/Licencia-UAN-green?style=for-the-badge)](MANUAL_DE_USO.md)
 
 Este repositorio contiene la **plantilla oficial y arquetipo de desarrollo** para la construcción de **Aplicaciones Móviles Educativas (APKs)** interactivas en la **Universidad Autónoma de Nayarit**.
