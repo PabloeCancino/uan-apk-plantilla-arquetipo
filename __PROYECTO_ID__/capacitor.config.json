@@ -1,0 +1,13 @@
+{
+  "appId": "mx.uan.{{MATERIA}}",
+  "appName": "{{APP_NOMBRE}}",
+  "webDir": "dist",
+  "server": {
+    "androidScheme": "https"
+  },
+  "android": {
+    "allowMixedContent": true,
+    "minSdkVersion": 26,
+    "targetSdkVersion": 34
+  }
+}

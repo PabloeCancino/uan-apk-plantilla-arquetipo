@@ -1,0 +1,140 @@
+/* === Fuente institucional === */
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@300;400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap');
+
+/* === Variables CSS — sistema de diseño responsivo === */
+:root {
+  /* Escala de fuente: controlada por FontSizeProvider (1 | 1.2 | 1.4) */
+  --font-scale: 1;
+
+  /* Tipografía fluida: escala automáticamente entre móvil y escritorio */
+  --fs-xs:   calc(clamp(9px,  1.8vw, 11px) * var(--font-scale));
+  --fs-sm:   calc(clamp(11px, 2.2vw, 13px) * var(--font-scale));
+  --fs-base: calc(clamp(12px, 2.5vw, 14px) * var(--font-scale));
+  --fs-md:   calc(clamp(13px, 2.8vw, 16px) * var(--font-scale));
+  --fs-lg:   calc(clamp(16px, 3.5vw, 22px) * var(--font-scale));
+  --fs-xl:   calc(clamp(18px, 4vw,   28px) * var(--font-scale));
+
+  /* Espaciado fluido */
+  --sp-xs: clamp(6px,  1.5vw, 10px);
+  --sp-sm: clamp(10px, 2vw,   16px);
+  --sp-md: clamp(14px, 3vw,   24px);
+  --sp-lg: clamp(20px, 4vw,   32px);
+
+  /* Tamaño del grafo SVG — escala con el ancho del viewport */
+  --grafo-size: clamp(140px, 38vw, 220px);
+}
+
+/* === Reset === */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html, body, #root {
+  height: 100%;
+  overflow: hidden;
+}
+
+body {
+  font-family: 'IBM Plex Sans', system-ui, -apple-system, sans-serif;
+  background: #010409;
+  color: #e6edf3;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-size: var(--fs-base);
+}
+
+/* === Scrollbars === */
+::-webkit-scrollbar { width: 5px; height: 5px; }
+::-webkit-scrollbar-track { background: transparent; }
+::-webkit-scrollbar-thumb { background: #30363d; border-radius: 3px; }
+::-webkit-scrollbar-thumb:hover { background: #58a6ff44; }
+
+/* === Animaciones === */
+@keyframes fadeSlideIn {
+  from { opacity: 0; transform: translateY(8px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes pulse {
+  0%, 100% { opacity: 1; }
+  50%       { opacity: 0.5; }
+}
+
+/* === Contenedor principal de cada vista === */
+.contenido-vista {
+  width: 100%;
+  max-width: 860px;
+  padding: var(--sp-md) var(--sp-lg);
+}
+
+/* === Grid de VistaTema — fluido === */
+.vista-tema-grid {
+  display: grid;
+  grid-template-columns: 1.4fr 1fr;
+  gap: var(--sp-md);
+  align-items: start;
+}
+
+/* === Grafo SVG responsivo === */
+.grafo-contenedor {
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  max-width: var(--grafo-size);
+  margin: 0 auto;
+}
+
+/* === Tipografía de VistaTema === */
+.tema-categoria-chip { font-size: var(--fs-xs); }
+.tema-titulo         { font-size: var(--fs-lg); }
+.tema-definicion     { font-size: var(--fs-sm); line-height: 1.8; }
+.tema-nota-texto     { font-size: var(--fs-sm); line-height: 1.7; }
+.tema-nota-label     { font-size: var(--fs-xs); }
+
+/* === Animación de entrada === */
+.fade-slide-in { animation: fadeSlideIn 0.25s ease-out; }
+
+/* === KaTeX overrides — hereda color del contenedor (Formula.jsx) === */
+.katex      { color: inherit !important; font-size: var(--fs-sm) !important; }
+.katex-html { color: inherit !important; }
+
+/* ═══════════════════════════════════════════
+   BREAKPOINTS
+═══════════════════════════════════════════ */
+
+/* — Tablet (600–900px) — */
+@media (min-width: 600px) and (max-width: 900px) {
+  :root { --grafo-size: clamp(160px, 30vw, 200px); }
+  .vista-tema-grid  { grid-template-columns: 1fr 1fr; }
+  .contenido-vista  { padding: var(--sp-sm) var(--sp-md); }
+}
+
+/* — Móvil (< 600px) — */
+@media (max-width: 600px) {
+  :root { --grafo-size: clamp(160px, 70vw, 240px); }
+
+  .vista-tema-grid { grid-template-columns: 1fr; }
+  .vista-tema-grid > div:last-child { order: -1; } /* grafo va primero */
+  .contenido-vista { padding: var(--sp-sm); }
+
+  /* Sidebar → drawer deslizable */
+  .sidebar-panel {
+    position: fixed !important;
+    top: 0; left: 0;
+    height: 100% !important;
+    z-index: 200;
+    transform: translateX(-100%);
+    transition: transform 0.28s cubic-bezier(0.4, 0, 0.2, 1);
+    box-shadow: 4px 0 24px #00000088;
+  }
+  .sidebar-panel.abierto { transform: translateX(0); }
+  .sidebar-overlay       { display: block !important; }
+  .topbar-desktop        { display: none !important; }
+  .topbar-mobile         { display: flex !important; }
+}
+
+/* — Escritorio grande (> 900px) — */
+@media (min-width: 900px) {
+  .contenido-vista { padding: var(--sp-lg) clamp(24px, 4vw, 40px); }
+}
