@@ -1,6 +1,6 @@
-# 🏛️ Arquetipo de Proyectos APK UAN — Norma NTE-UAN-APK-001 v1.3
+# 🏛️ Arquetipo de Proyectos APK UAN — Norma NTE-UAN-APK-001 v1.4
 
-[![Norma](https://img.shields.io/badge/Norma-NTE--UAN--APK--001%20v1.3-purple?style=for-the-badge)](MANUAL_DE_USO.md)
+[![Norma](https://img.shields.io/badge/Norma-NTE--UAN--APK--001%20v1.4-purple?style=for-the-badge)](NTE-UAN-APK-001.md)
 [![Despliegue](https://img.shields.io/badge/GitHub%20Pages-Habilitado-blue?style=for-the-badge&logo=githubpages)](MANUAL_DE_USO.md)
 [![Licencia](https://img.shields.io/badge/Licencia-UAN-green?style=for-the-badge)](MANUAL_DE_USO.md)
 
@@ -10,6 +10,7 @@ Este repositorio contiene la **plantilla oficial y arquetipo de desarrollo** par
 
 ## 📚 Documentación
 
+- 📋 **[Norma Técnica Oficial (NTE-UAN-APK-001.md)](NTE-UAN-APK-001.md):** Especificación v1.4 de estándares mínimos obligatorios de arquitectura, KaTeX, SVG con asíntotas, CI/CD y distribución.
 - 📖 **[Manual de Uso Completo (MANUAL_DE_USO.md)](MANUAL_DE_USO.md):** Guía paso a paso para crear, personalizar, probar y compilar APKs educativas.
 - ⚙️ **`nuevo_proyecto.ps1`:** Script interactivo de automatización en PowerShell que genera la estructura completa de un nuevo proyecto a partir de este arquetipo.
 - 🎨 **`crear_app_jsx.ps1`:** Generador de interfaz de usuario institucional `App.jsx`.
