@@ -37,8 +37,10 @@ Este repositorio contiene la **plantilla oficial y arquetipo de desarrollo** par
 
 ---
 
-## 📄 Créditos e Institución
+## 📄 Licencia y Créditos
 
-**Universidad Autónoma de Nayarit**  
-Coordinación de Tecnología Educativa  
+Desarrollado en la **Universidad Autónoma de Nayarit** (UAN).  
+Investigación Docente en Tecnología Educativa.  
+Programa Académico de Licenciatura en Matemáticas.  
+Unidad Académica de Ciencias Básicas e Ingenierías.  
 Todos los derechos reservados © 2026.
