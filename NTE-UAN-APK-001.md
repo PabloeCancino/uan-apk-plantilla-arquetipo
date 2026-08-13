@@ -578,4 +578,4 @@ PATH        += %ANDROID_HOME%\emulator
 
 ---
 
-*Elaborada por: Dr. Pablo Eduardo Cancino Marentes. Investigación en Tecnología Educativa PALMAT-UACBI-UAN · Próxima revisión: 2026-10-23*
+*Elaborada por: Dr. Pablo Eduardo Cancino Marentes. Investigación Docente en Tecnología Educativa PALMAT-UACBI-UAN · Próxima revisión: 2026-10-23*
